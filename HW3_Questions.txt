@@ -1,0 +1,40 @@
+HW3_Questions
+
+QUESTION #1:
+Why do we want to support streaming? What about streaming is important, or useful?
+
+1)streaming improves the user experience, it allows the user to see the response as it is being generated, and it allows the user to interact with the application in real-time. lows the response to be displayed to the user gradually as it's being generated, rather than waiting for the complete response before showing anything. This creates a more engaging and interactive experience, similar to how ChatGPT shows responses.
+2)streaming allows the application to handle long responses more gracefully, without freezing or crashing.Without streaming, users would have to wait until the entire response is generated before seeing anything, which could feel unresponsive. 
+3)treaming allows for better memory management, especially when dealing with large responses, as it processes and sends the data in chunks rather than holding the entire response in memory.
+4) Streaming reudces latencies enabling quick, on-demand responses in real-time applications like customer service chatbots or live data monitoring systems3.
+5) Streaming allows for more natural, responsive interactions, which is particularly valuable in applications where users expect instant, contextually aware responses3.
+6) It allows AI models to adapt and evolve as new data becomes available.
+7) It is better for scalability, as it allows the application to handle large volumes of data in real-time without compromising performance.
+8) It allows for immediate processing of data as it is received, ensuring up-to-the-minute responses and analyses
+9) All of these things improve user experience, and make the application more responsive and engaging.
+
+
+QUESTION #2:
+Why are we using User Session here? What about Python makes us need to use this? Why not just store everything in a global variable?
+Answer 2: By using User Session, we can store the user's data in a way that is specific to the user thereby preventing data from being shared between users. This is important because it allows us to keep the user's data private and secure while also minimizing any risk of confusing data from one user to another.
+1. Concurrency: Python web applications typically handle multiple users simultaneously. Global variables would be shared across all users, leading to data mixing and potential security issues. Each user needs their own isolated data space.
+
+2. Thread Safety: Python web frameworks often use multiple threads or workers to handle requests. Global variables aren't thread-safe by default, meaning concurrent access could corrupt data or cause race conditions. Sessions provide thread-safe storage.
+
+3. Request Context: Web applications are stateless by nature - each HTTP request is independent. Sessions help maintain state between requests for each specific user.
+
+4. Security: Global variables would expose one user's data to other users. Sessions ensure each user can only access their own data.
+
+5. Memory Management: Sessions can be configured to expire and clean up unused data, while global variables would persist indefinitely, potentially causing memory leaks.
+
+
+Discussion Question #1:
+
+Upload a PDF file of the recent DeepSeek-R1 paper and ask the following questions:
+
+    What is RL and how does it help reasoning?
+    What is the difference between DeepSeek-R1 and DeepSeek-R1-Zero?
+    What is this paper about?
+
+Does this application pass your vibe check? Are there any immediate pitfalls you're noticing?
+
